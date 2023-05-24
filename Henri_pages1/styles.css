@@ -1,0 +1,54 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: pink;
+}
+
+.podnaslov{
+    text-align: center;
+    font-size: 48px;
+    color: purple;
+}
+
+#baner{
+    border: 1px solid purple;
+    background-image: url("img/castle.jpg");
+    background-size: 100%;
+    width:100%;
+    height:800px;
+}
+
+p, li{
+    font-size:24px;
+}
+
+.tekstDiv{
+
+    margin: 100px 100px 0 100px;
+    text-align: justify;
+}
+
+.centriranaSlika{
+    border: 3px solid purple;
+    margin: auto;
+    width: 25%;
+    height:15%;
+    padding: 10px;
+    text-align: center;
+}
+.centriranaSlika img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.footer{
+    border-top:2px solid purple;
+    padding: 20px 0 5px 40px;
+    width:100%;
+    font-size:14px;
+}
+.footer a{
+    text-decoration: none;
+}
+

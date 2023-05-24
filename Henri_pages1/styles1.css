@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: papayawhip;
+}
+
+.podnaslov{
+    text-align: center;
+    font-size: 38px;
+    color: purple;
+}
+
+.podnaslov2{
+    text-align: center;
+    font-size: 20px;
+    color: purple;
+}
+
+.tekstDiv{
+
+    border: 1px dashed purple;
+    border-radius: 25px;
+    margin: 50px 100px 0 100px;
+    padding: 20px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.centrirajTekst{
+    text-align: center;
+}
+
+.sakrijSadrzaj{
+    display:none;
+}

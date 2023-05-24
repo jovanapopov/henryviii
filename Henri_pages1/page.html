@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>Početna</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class = "naslov">
+            <h3><span class="razmakSlova">SAJT O HENRIJU</span> VIII</h3>
+        </div>
+        
+        <div id="navigacija">
+            <a href="page.html">Početna</a>
+            <a href="page1.html">Detalji</a>
+        </div>
+
+
+        <div id="baner"> 
+        </div>
+
+
+        <div class="tekstDiv">
+            <h3 class="podnaslov">Henri VIII</h3>
+            <p> 
+                Henri VIII je bio vladar Engleske i Irske od 1590. do 28. januara 1547. kada je preminuo. Nasledio je svog oca Henrija VII, osnivača dinastije Tjudor kojoj on pripada. Famozan je zbog činjenice da se šest puta ženio i zbog reformacije engleske crkve. Pozabavila bi se njime kao ličnošću kroz prizmu njegovih šest žena, jer na tim poljima možemo dosta saznati o karakteristikama kralja, i šta je sve čovek spreman da učini kako bi dobio muškog naslednika. Pa, hajde da navedemo njegovih šest žena: 
+            </p>
+            <ul>
+                <li>Katarina Od Aragona</li>
+                <li>Ana Bolen</li>
+                <li>Džejn Simor</li>
+                <li>Ana Klevska</li>
+                <li>Katarina Harvard</li>
+                <li>Katarina Par</li>
+            </ul>
+        </div>
+
+        <div class="centriranaSlika">
+            <img src="img/Henry-VIII-2.jpg" alt="Henri VIII">
+            <span class="centriranTekst"><i>Portret Henrija VIII</i></span>
+        </div>
+
+        <div class="tekstDiv">
+            <h3 class="podnaslov">Inventar Henrija VIII</h3>
+            <p> 
+                Inventar Henrija VIII sastavljen 1547. je spisak poseda krune, koji se sada nalazi u Britanskoj biblioteci Harlei MS 1419.
+Popis je napravljen po narudžbi od 14. septembra 1547. tokom prve godine vladavine Edvarda VI Engleske. Sačuvani rukopisi navode imovinu Henrija VIII stavku po stavku, prema njihovoj lokaciji u kućama. Zabeleženo je i naoružanje brodova i utvrđenja.[1] Ukupno je na listi 17.810 stavki, a neki od ovih unosa sadrže više objekata. Uprkos ovom obilju, samo mali broj objekata je opstao i može se identifikovati. Novčane vrednosti predmeta nisu zabeležene, iako su date težine mnogih zlatnih i srebrnih predmeta.
+             </p>
+             <br>
+             <p>Klikom na sliku ispod menja se prikaz artefakta</p>
+          
+        </div>
+
+        <div class="centriranaSlika" >
+            <img src="img/artefakt1.jpg" alt="artefakt" id="imgArtefakt" onclick="promenaSlike()">
+            <span class="centriranTekst" id="nazivSlikeArtefakti"><i>Kraljevski zlatni pehar</i></span>
+        </div>
+            
+    
+          
+        <p class="footer">
+
+          Ovo je link wikipedia stranice o Henriju VIII: <a style = "background-color:yellow;" href="https://sr.wikipedia.org/sr-ec/%D0%A5%D0%B5%D0%BD%D1%80%D0%B8_VIII_%D0%A2%D1%98%D1%83%D0%B4%D0%BE%D1%80">wikipedia link</a>
+
+        </p> 
+
+    </body>
+
+    <script>
+
+        var brSlike=1; //inicijalno prva slika prikazana
+        function promenaSlike(){
+
+            if(brSlike==3)  //ako je zadnja slika vrati na pocetak
+                brSlike=0;
+            brSlike++;  //uvecaj na sledecu 
+
+            var nazivSlike='img/artefakt' + brSlike + '.jpg';  //slike su imenovane rednim brojem 1 2 3
+            document.getElementById('imgArtefakt').src=nazivSlike; //dodeli src slike na postojeci img element
+            podesiNazivSlike(brSlike); //prosledi rbr slike za prikaz opisa ispod slike
+
+        }
+
+        function podesiNazivSlike(br){
+            var nazivSlikeArtefakti=document.getElementById('nazivSlikeArtefakti');
+            switch(br){ //zavisno od rednog broja slike, ispod slike prikazace opis
+                case 1:{
+                    nazivSlikeArtefakti.innerHTML='Kraljevski zlatni pehar';
+                    break;
+                }
+                case 2:{
+                    nazivSlikeArtefakti.innerHTML='Trijumf Herkulesa-tkanina';
+                    break;
+                }
+                case 3:{
+                    nazivSlikeArtefakti.innerHTML='Meri od Madjarske-ulje na platnu';
+                    break;
+                }
+            }
+        }
+
+    </script>
+
+</html>
